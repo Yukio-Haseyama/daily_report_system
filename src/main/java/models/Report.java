@@ -46,7 +46,6 @@ import lombok.Setter;
 @NoArgsConstructor //引数なしコンストラクタを自動生成する(Lombok)
 @AllArgsConstructor //全てのクラスフィールドを引数にもつ引数ありコンストラクタを自動生成する(Lombok)
 @Entity
-
 public class Report {
 
     /**
@@ -69,6 +68,18 @@ public class Report {
      */
     @Column(name = JpaConst.REP_COL_REP_DATE, nullable = false)
     private LocalDate reportDate;
+
+    /**
+     * 出勤時間
+     */
+    @Column(name = JpaConst.REP_COL_ATTENDANCE, nullable = false)
+    private String attendance;
+
+    /**
+     * 退勤時間
+     */
+    @Column(name = JpaConst.REP_COL_LEAVING, nullable = false)
+    private String leaving;
 
     /**
      * 日報のタイトル
@@ -96,5 +107,3 @@ public class Report {
     private LocalDateTime updatedAt;
 
 }
-
-

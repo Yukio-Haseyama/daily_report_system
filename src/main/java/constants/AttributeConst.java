@@ -4,13 +4,12 @@ package constants;
  * 画面の項目値等を定義するEnumクラス
  *
  */
-
 public enum AttributeConst {
 
-  //フラッシュメッセージ
+    //フラッシュメッセージ
     FLUSH("flush"),
 
-    //一覧画面共通
+  //一覧画面共通
     MAX_ROW("maxRow"),
     PAGE("page"),
 
@@ -42,12 +41,14 @@ public enum AttributeConst {
     DEL_FLAG_TRUE(1),
     DEL_FLAG_FALSE(0),
 
-    //日報管理
+  //日報管理
     REPORT("report"),
     REPORTS("reports"),
     REP_COUNT("reports_count"),
     REP_ID("id"),
     REP_DATE("report_date"),
+    REP_ATTENDANCE("attendance"),
+    REP_LEAVING("leaving"),
     REP_TITLE("title"),
     REP_CONTENT("content");
 
@@ -71,4 +72,5 @@ public enum AttributeConst {
     public Integer getIntegerValue() {
         return this.i;
     }
+
 }
